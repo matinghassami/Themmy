@@ -7,7 +7,7 @@
     <title>ورود و ثبت نام</title>
     <link rel="stylesheet" href="./index.css" />
   </head>
-  <body
+   <body
     class="
       flex
       justify-center
@@ -44,15 +44,15 @@
       >
         <li
           x-on:click="openTab = 1"
-          x-bind:class="{'border-b-2 border-slate-500' : openTab === 1}"
-          class="px-4 text-slate-400 cursor-pointer py-2"
+          x-bind:class="{'border-b-2 border-sky-500' : openTab === 1}"
+          class="px-4 text-emerald-700 cursor-pointer py-2"
         >
           ورود
         </li>
         <li
           x-on:click="openTab = 2"
-          x-bind:class="{'border-b-2 border-slate-500' : openTab === 2}"
-          class="px-4 text-slate-400 cursor-pointer py-2"
+          x-bind:class="{'border-b-2 border-sky-500' : openTab === 2}"
+          class="px-4 text-emerald-700 cursor-pointer py-2"
         >
           ثبت نام
         </li>
@@ -138,7 +138,7 @@
                 text-white
                 bg-red-500
                 rounded-full
-                hover:bg-red-200 hover:text-slate-400
+                hover:bg-red-200 hover:text-emerald-700
                 transition
                 delay-100
                 cursor-pointer
@@ -486,7 +486,7 @@
                 >
                   <!-- email -->
                   <div class="flex flex-col gap-2">
-                    <label for="email" class="text-sm font-mono text-slate-400"
+                    <label for="email" class="text-sm font-mono text-emerald-700"
                       >ایمیل</label
                     >
                     <div class="relative">
@@ -498,7 +498,7 @@
                       />
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        class="h-6 w-6 text-slate-400 absolute top-2 left-3"
+                        class="h-6 w-6 text-emerald-700 absolute top-2 left-3"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -646,14 +646,14 @@
         <form action="" class="flex flex-col gap-4">
           <!-- username -->
           <div class="flex flex-col gap-2">
-            <label for="username" class="text-sm font-mono text-slate-400"
+            <label for="username" class="text-sm font-mono text-emerald-700"
               >نام کاربری</label
             >
             <div class="relative">
               <input type="text" class="input" id="username" />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-6 w-6 text-slate-400 absolute top-2 left-3"
+                class="h-6 w-6 text-emerald-700 absolute top-2 left-3"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -669,14 +669,14 @@
           </div>
           <!-- password -->
           <div class="flex flex-col gap-2">
-            <label for="password" class="text-sm font-mono text-slate-400"
+            <label for="password" class="text-sm font-mono text-emerald-700"
               >رمز عبور</label
             >
             <div class="relative">
               <input type="password" class="input" id="password" />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-6 w-6 text-slate-400 absolute top-2 left-3"
+                class="h-6 w-6 text-emerald-700 absolute top-2 left-3"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -692,7 +692,7 @@
           </div>
 
           <!-- button -->
-          <button type="submit" class="btn rounded-full bg-slate-700">
+          <button type="submit" class="btn rounded-full bg-emerald-700">
             ورود
           </button>
         </form>
@@ -701,14 +701,14 @@
       <div x-cloak x-show="openTab === 2">
         <form class="gap-4 flex flex-col">
           <div class="flex flex-col gap-2">
-            <label for="username" class="font-mono text-slate-400 text-sm">
+            <label for="username" class="font-mono text-amber-700 text-sm">
               نام کاربری
             </label>
             <div class="relative">
               <input id="username" class="input" type="text" />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="lable text-slate-400"
+                class="lable text-amber-700"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -724,14 +724,14 @@
           </div>
 
           <div class="flex flex-col gap-2">
-            <label for="email" class="font-mono text-slate-400 text-sm">
+            <label for="email" class="font-mono text-amber-700 text-sm">
               ایمیل
             </label>
             <div class="relative">
               <input id="email" class="input" type="email" />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="lable text-slate-400"
+                class="lable text-amber-700"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -747,14 +747,14 @@
           </div>
 
           <div class="flex flex-col gap-2">
-            <label for="password" class="font-mono text-slate-400 text-sm">
+            <label for="password" class="font-mono text-amber-700 text-sm">
               رمز عبور
             </label>
             <div class="relative">
               <input class="input" type="password" id="password" />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="lable text-slate-400"
+                class="lable text-amber-700"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -772,7 +772,7 @@
           <div class="flex flex-col gap-2">
             <label
               for="repeatPassword"
-              class="font-mono text-slate-400 text-sm"
+              class="font-mono text-amber-700 text-sm"
             >
               تکرار رمز عبور
             </label>
@@ -780,7 +780,7 @@
               <input class="input" id="repeatPassword" type="password" />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="lable text-slate-400"
+                class="lable text-amber-700"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -794,12 +794,12 @@
               </svg>
             </div>
           </div>
-          <button class="rounded-full btn bg-slate-700"> ثبت نام </button>
+          <button class="rounded-full btn bg-amber-700"> ثبت نام </button>
         </form>
       </div>
     </main>
     <section class="fixed bottom-0 inset-x-0 w-full h-12 bg-transparent border-t border-slate-600 flex justify-center items-center">
-      <p class="text-sm text-slate-400"> کپی رایت 2022 © تمامی حقوق این سایت مطلق به Themmy.info است و کپی برداری و استفاده غیر قانونی از خدمات و ارزش های این سایت غیر قانونی و غیر اخلاقی میباشد </p>
+      <p class="text-sm text-emerald-200"> کپی رایت 2022 © تمامی حقوق این سایت مطلق به Themmy.info است و کپی برداری و استفاده غیر قانونی از خدمات و ارزش های این سایت غیر قانونی و غیر اخلاقی میباشد </p>
     </section>
   </body>
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>

@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ورود و ثبت نام</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body
+    class="
+      flex
+      justify-center
+      items-center
+      h-[45rem]
+      overflow-hidden
+      bg-slate-50
+    "
+  >
+    <main
+      class="
+        border border-gray-300
+        p-4
+        bg-slate-300
+        rounded-xl
+        bg-opacity-30
+        max-w-2xl
+        w-full
+      "
+      x-data="{openTab : 1}"
+    >
+      <ul
+        class="
+          flex flex-row
+          items-center
+          list-none
+          text-lg
+          mb-8
+          font-mono
+          text-gray-800
+        "
+      >
+        <li
+          x-on:click="openTab = 1"
+          x-bind:class="{'border-b-2 border-gray-400' : openTab === 1}"
+          class="px-4 text-gray-600 cursor-pointer py-2"
+        >
+          ورود
+        </li>
+        <li
+          x-on:click="openTab = 2"
+          x-bind:class="{'border-b-2 border-gray-400' : openTab === 2}"
+          class="px-4 text-gray-600 cursor-pointer py-2"
+        >
+          ثبت نام
+        </li>
+      </ul>
+      <div x-show="openTab === 1">
+        <div class="flex flex-col items-center justify-center gap-4 mb-4">
+          <h3 class="text-xl font-light text-slate-900">ورود با ...</h3>
+          <div
+            class="flex gap-4 items-center"
+            x-data="{openTwitter : false, openFacebook: false, openGoogle: false, openGithub: false}"
+          >
+            <!-- twitter -->
+            <div
+              x-on:click="openTwitter = true"
+              class="
+                w-12
+                h-12
+                flex
+                items-center
+                justify-center
+                text-white
+                bg-blue-400
+                rounded-full
+                hover:bg-blue-200 hover:text-blue-400
+                transition
+                delay-100
+                cursor-pointer
+              "
+            >
+              <svg
+                class="fill-current w-4 h-4"
+                viewBox="0 0 191 155"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M190.025 19.1417C183.067 22.225 175.592 24.3083 167.733 25.25C175.842 20.3983 181.908 12.7622 184.8 3.76668C177.182 8.29159 168.845 11.4766 160.15 13.1833C154.303 6.94055 146.559 2.80273 138.119 1.41229C129.68 0.0218596 121.017 1.45661 113.477 5.49378C105.936 9.53096 99.9398 15.9447 96.4179 23.7392C92.8961 31.5337 92.0461 40.2729 94 48.6C78.5641 47.825 63.4636 43.8129 49.6785 36.8242C35.8935 29.8355 23.732 20.0264 13.9833 8.03334C10.65 13.7833 8.73333 20.45 8.73333 27.55C8.72962 33.9416 10.3036 40.2354 13.3157 45.8728C16.3277 51.5102 20.6847 56.317 26 59.8667C19.8356 59.6705 13.8073 58.0049 8.41667 55.0083V55.5083C8.41605 64.4728 11.5169 73.1615 17.1932 80.1C22.8694 87.0385 30.7714 91.7994 39.5583 93.575C33.8399 95.1226 27.8445 95.3506 22.025 94.2417C24.5041 101.955 29.3333 108.7 35.8364 113.533C42.3395 118.365 50.191 121.043 58.2917 121.192C44.5403 131.987 27.5574 137.842 10.075 137.817C6.97818 137.818 3.88397 137.637 0.808334 137.275C18.554 148.685 39.2112 154.74 60.3083 154.717C131.725 154.717 170.767 95.5667 170.767 44.2667C170.767 42.6 170.725 40.9167 170.65 39.25C178.244 33.7581 184.799 26.9575 190.008 19.1667L190.025 19.1417V19.1417Z"
+                  fill="current"
+                />
+              </svg>
+            </div>
+            <!-- facebook -->
+            <div
+              x-on:click="openFacebook = true"
+              class="
+                w-12
+                h-12
+                flex
+                items-center
+                justify-center
+                text-white
+                bg-blue-700
+                rounded-full
+                hover:bg-blue-200 hover:text-blue-700
+                transition
+                delay-100
+                cursor-pointer
+              "
+            >
+              <svg
+                viewBox="0 0 200 200"
+                fill="none"
+                class="w-4 h-4 fill-current"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M0 100.558C0 150.275 36.1083 191.617 83.3333 200V127.775H58.3333V100H83.3333V77.775C83.3333 52.775 99.4417 38.8917 122.225 38.8917C129.442 38.8917 137.225 40 144.442 41.1083V66.6667H131.667C119.442 66.6667 116.667 72.775 116.667 80.5583V100H143.333L138.892 127.775H116.667V200C163.892 191.617 200 150.283 200 100.558C200 45.25 155 0 100 0C45 0 0 45.25 0 100.558Z"
+                  fill="current"
+                />
+              </svg>
+            </div>
+            <!-- google + -->
+            <div
+              x-on:click="openGoogle = true"
+              class="
+                w-12
+                h-12
+                flex
+                items-center
+                justify-center
+                text-white
+                bg-red-500
+                rounded-full
+                hover:bg-red-200 hover:text-gray-600
+                transition
+                delay-100
+                cursor-pointer
+              "
+            >
+              <svg
+                class="w-4 h-4 fill-current"
+                viewBox="0 0 200 200"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M171.777 91.875C171.719 86.6016 171.699 81.2891 171.68 75.9961H155.898C155.84 81.2695 155.801 86.5625 155.762 91.875C150.449 91.8945 145.176 91.9336 139.902 91.9922V107.793C145.176 107.852 150.488 107.891 155.762 107.949C155.82 113.223 155.82 118.516 155.859 123.789L171.66 123.789C171.68 118.516 171.719 113.223 171.758 107.91C177.07 107.852 182.344 107.832 187.617 107.773V91.9727C182.363 91.9336 177.051 91.9336 171.777 91.875ZM68.2617 91.9531C68.2422 98.2617 68.2617 104.59 68.2813 110.898C78.8672 111.25 89.4727 111.094 100.059 111.25C95.3906 134.746 63.457 142.363 46.5625 127.012C29.1797 113.555 30 84.043 48.0664 71.543C60.7031 61.4648 78.6523 63.9453 91.2891 72.6758C96.25 68.0859 100.898 63.1641 105.371 58.0859C94.8633 49.707 81.9727 43.7305 68.2617 44.3555C39.6289 43.3984 13.3203 68.4766 12.8516 97.1289C11.0156 120.547 26.4063 143.496 48.125 151.777C69.7656 160.117 97.5195 154.434 111.348 134.98C120.469 122.695 122.441 106.875 121.367 92.0117C103.652 91.875 85.957 91.8945 68.2617 91.9531V91.9531Z"
+                  fill="current"
+                />
+              </svg>
+            </div>
+            <!-- github -->
+            <div
+              x-on:click="openGithub = true"
+              class="
+                w-12
+                h-12
+                flex
+                items-center
+                justify-center
+                text-white
+                bg-gray-700
+                rounded-full
+                hover:bg-gray-200 hover:text-gray-700
+                transition
+                delay-100
+                cursor-pointer
+              "
+            >
+              <svg
+                class="w-4 h-4 fill-current"
+                ّ
+                viewBox="0 0 200 200"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_21:10)">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M100 0C44.75 0 0 44.75 0 100C0 144.25 28.625 181.625 68.375 194.875C73.375 195.75 75.25 192.75 75.25 190.125C75.25 187.75 75.125 179.875 75.125 171.5C50 176.125 43.5 165.375 41.5 159.75C40.375 156.875 35.5 148 31.25 145.625C27.75 143.75 22.75 139.125 31.125 139C39 138.875 44.625 146.25 46.5 149.25C55.5 164.375 69.875 160.125 75.625 157.5C76.5 151 79.125 146.625 82 144.125C59.75 141.625 36.5 133 36.5 94.75C36.5 83.875 40.375 74.875 46.75 67.875C45.75 65.375 42.25 55.125 47.75 41.375C47.75 41.375 56.125 38.75 75.25 51.625C83.25 49.375 91.75 48.25 100.25 48.25C108.75 48.25 117.25 49.375 125.25 51.625C144.375 38.625 152.75 41.375 152.75 41.375C158.25 55.125 154.75 65.375 153.75 67.875C160.125 74.875 164 83.75 164 94.75C164 133.125 140.625 141.625 118.375 144.125C122 147.25 125.125 153.25 125.125 162.625C125.125 176 125 186.75 125 190.125C125 192.75 126.875 195.875 131.875 194.875C151.726 188.173 168.976 175.414 181.197 158.395C193.418 141.375 199.994 120.952 200 100C200 44.75 155.25 0 100 0Z"
+                    fill="current"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_21:10">
+                    <rect width="200" height="200" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+            <!-- twitter modal -->
+            <div
+              x-transition
+              x-transition:enter.duration.300ms
+              x-transition:leave.duration.400ms
+              class="
+                bg-blue-900 bg-opacity-50
+                flex
+                items-center
+                justify-center
+                fixed
+                inset-0
+                z-10
+              "
+              x-show="openTwitter"
+              x-cloak
+            >
+              <!-- modal -->
+              <div
+                x-on:click.away="openTwitter = false"
+                class="
+                  w-full
+                  sm:grid sm:grid-rows-2
+                  max-w-sm
+                  sm:max-w-md
+                  rounded-xl
+                  flex
+                  h-40
+                  sm:h-72
+                  overflow-hidden
+                "
+              >
+                <!-- logo -->
+                <div
+                  class="
+                    flex
+                    items-center
+                    justify-center
+                    w-1/3
+                    h-full
+                    sm:w-full
+                    text-white
+                    bg-blue-400
+                  "
+                >
+                  <svg
+                    class="fill-current w-6 h-6 lg:hover:animate-pulse"
+                    viewBox="0 0 191 155"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M190.025 19.1417C183.067 22.225 175.592 24.3083 167.733 25.25C175.842 20.3983 181.908 12.7622 184.8 3.76668C177.182 8.29159 168.845 11.4766 160.15 13.1833C154.303 6.94055 146.559 2.80273 138.119 1.41229C129.68 0.0218596 121.017 1.45661 113.477 5.49378C105.936 9.53096 99.9398 15.9447 96.4179 23.7392C92.8961 31.5337 92.0461 40.2729 94 48.6C78.5641 47.825 63.4636 43.8129 49.6785 36.8242C35.8935 29.8355 23.732 20.0264 13.9833 8.03334C10.65 13.7833 8.73333 20.45 8.73333 27.55C8.72962 33.9416 10.3036 40.2354 13.3157 45.8728C16.3277 51.5102 20.6847 56.317 26 59.8667C19.8356 59.6705 13.8073 58.0049 8.41667 55.0083V55.5083C8.41605 64.4728 11.5169 73.1615 17.1932 80.1C22.8694 87.0385 30.7714 91.7994 39.5583 93.575C33.8399 95.1226 27.8445 95.3506 22.025 94.2417C24.5041 101.955 29.3333 108.7 35.8364 113.533C42.3395 118.365 50.191 121.043 58.2917 121.192C44.5403 131.987 27.5574 137.842 10.075 137.817C6.97818 137.818 3.88397 137.637 0.808334 137.275C18.554 148.685 39.2112 154.74 60.3083 154.717C131.725 154.717 170.767 95.5667 170.767 44.2667C170.767 42.6 170.725 40.9167 170.65 39.25C178.244 33.7581 184.799 26.9575 190.008 19.1667L190.025 19.1417V19.1417Z"
+                      fill="current"
+                    />
+                  </svg>
+                </div>
+
+                <!-- inputs -->
+                <div
+                  class="
+                    w-2/3
+                    sm:w-full
+                    p-4
+                    bg-white
+                    flex flex-col
+                    gap-4
+                    h-full
+                  "
+                >
+                  <!-- email -->
+                  <div class="flex flex-col gap-2">
+                    <label for="email" class="text-sm font-mono text-blue-500"
+                      >ایمیل</label
+                    >
+                    <div class="relative">
+                      <input
+                        type="email"
+                        class="input"
+                        id="email"
+                        placeholder="example@example.com"
+                      />
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-6 w-6 text-blue-500 absolute top-2 left-3"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <button
+                    type="submit"
+                    class="btn rounded-xl bg-blue-500"
+                    style="margin-top: 0"
+                  >
+                    ورود
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- facebook modal -->
+            <div
+              x-transition
+              x-transition:enter.duration.300ms
+              x-transition:leave.duration.400ms
+              class="
+                bg-blue-900 bg-opacity-60
+                flex
+                items-center
+                justify-center
+                fixed
+                inset-0
+                z-10
+              "
+              x-show="openFacebook"
+              x-cloak
+            >
+              <!-- modal -->
+              <div
+                x-on:click.away="openFacebook = false"
+                class="
+                  w-full
+                  sm:grid sm:grid-rows-2
+                  max-w-sm
+                  sm:max-w-md
+                  rounded-xl
+                  flex
+                  h-40
+                  sm:h-72
+                  overflow-hidden
+                "
+              >
+                <!-- logo -->
+                <div
+                  class="
+                    flex
+                    items-center
+                    justify-center
+                    w-1/3
+                    h-full
+                    sm:w-full
+                    text-white
+                    bg-blue-700
+                  "
+                >
+                  <svg
+                    viewBox="0 0 200 200"
+                    fill="none"
+                    class="lg:hover:animate-pulse w-6 h-6 fill-current"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M0 100.558C0 150.275 36.1083 191.617 83.3333 200V127.775H58.3333V100H83.3333V77.775C83.3333 52.775 99.4417 38.8917 122.225 38.8917C129.442 38.8917 137.225 40 144.442 41.1083V66.6667H131.667C119.442 66.6667 116.667 72.775 116.667 80.5583V100H143.333L138.892 127.775H116.667V200C163.892 191.617 200 150.283 200 100.558C200 45.25 155 0 100 0C45 0 0 45.25 0 100.558Z"
+                      fill="current"
+                    />
+                  </svg>
+                </div>
+
+                <!-- inputs -->
+                <div
+                  class="
+                    w-2/3
+                    sm:w-full
+                    p-4
+                    bg-white
+                    flex flex-col
+                    gap-4
+                    h-full
+                  "
+                >
+                  <!-- email -->
+                  <div class="flex flex-col gap-2">
+                    <label for="email" class="text-sm font-mono text-blue-700"
+                      >ایمیل</label
+                    >
+                    <div class="relative">
+                      <input
+                        type="email"
+                        class="input"
+                        id="email"
+                        placeholder="example@example.com"
+                      />
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-6 w-6 text-blue-700 absolute top-2 left-3"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <button
+                    type="submit"
+                    class="btn rounded-xl bg-blue-700"
+                    style="margin-top: 0"
+                  >
+                    ورود
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- google + modal -->
+            <div
+              x-transition
+              x-transition:enter.duration.300ms
+              x-transition:leave.duration.400ms
+              class="
+                bg-red-900 bg-opacity-60
+                flex
+                items-center
+                justify-center
+                fixed
+                inset-0
+                z-10
+              "
+              x-show="openGoogle"
+              x-cloak
+            >
+              <!-- modal -->
+              <div
+                x-on:click.away="openGoogle = false"
+                class="
+                  w-full
+                  sm:grid sm:grid-rows-2
+                  max-w-sm
+                  sm:max-w-md
+                  rounded-xl
+                  flex
+                  h-40
+                  sm:h-72
+                  overflow-hidden
+                "
+              >
+                <!-- logo -->
+                <div
+                  class="
+                    flex
+                    items-center
+                    justify-center
+                    w-1/3
+                    h-full
+                    sm:w-full
+                    text-white
+                    bg-red-500
+                  "
+                >
+                  <svg
+                    class="w-6 h-6 lg:hover:animate-pulse fill-current"
+                    viewBox="0 0 200 200"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M171.777 91.875C171.719 86.6016 171.699 81.2891 171.68 75.9961H155.898C155.84 81.2695 155.801 86.5625 155.762 91.875C150.449 91.8945 145.176 91.9336 139.902 91.9922V107.793C145.176 107.852 150.488 107.891 155.762 107.949C155.82 113.223 155.82 118.516 155.859 123.789L171.66 123.789C171.68 118.516 171.719 113.223 171.758 107.91C177.07 107.852 182.344 107.832 187.617 107.773V91.9727C182.363 91.9336 177.051 91.9336 171.777 91.875ZM68.2617 91.9531C68.2422 98.2617 68.2617 104.59 68.2813 110.898C78.8672 111.25 89.4727 111.094 100.059 111.25C95.3906 134.746 63.457 142.363 46.5625 127.012C29.1797 113.555 30 84.043 48.0664 71.543C60.7031 61.4648 78.6523 63.9453 91.2891 72.6758C96.25 68.0859 100.898 63.1641 105.371 58.0859C94.8633 49.707 81.9727 43.7305 68.2617 44.3555C39.6289 43.3984 13.3203 68.4766 12.8516 97.1289C11.0156 120.547 26.4063 143.496 48.125 151.777C69.7656 160.117 97.5195 154.434 111.348 134.98C120.469 122.695 122.441 106.875 121.367 92.0117C103.652 91.875 85.957 91.8945 68.2617 91.9531V91.9531Z"
+                      fill="current"
+                    />
+                  </svg>
+                </div>
+
+                <!-- inputs -->
+                <div
+                  class="
+                    w-2/3
+                    sm:w-full
+                    p-4
+                    bg-white
+                    flex flex-col
+                    gap-4
+                    h-full
+                  "
+                >
+                  <!-- email -->
+                  <div class="flex flex-col gap-2">
+                    <label for="email" class="text-sm font-mono text-gray-600"
+                      >ایمیل</label
+                    >
+                    <div class="relative">
+                      <input
+                        type="email"
+                        class="input"
+                        id="email"
+                        placeholder="example@example.com"
+                      />
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-6 w-6 text-gray-600 absolute top-2 left-3"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <button
+                    type="submit"
+                    class="btn rounded-xl bg-red-500"
+                    style="margin-top: 0"
+                  >
+                    ورود
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- github modal -->
+            <div
+              x-transition
+              x-transition:enter.duration.300ms
+              x-transition:leave.duration.400ms
+              class="
+                bg-gray-900 bg-opacity-60
+                flex
+                items-center
+                justify-center
+                fixed
+                inset-0
+                z-10
+              "
+              x-show="openGithub"
+              x-cloak
+            >
+              <!-- modal -->
+              <div
+                x-on:click.away="openGithub = false"
+                class="
+                  w-full
+                  sm:grid sm:grid-rows-2
+                  max-w-sm
+                  sm:max-w-md
+                  rounded-xl
+                  flex
+                  h-40
+                  sm:h-72
+                  overflow-hidden
+                "
+              >
+                <!-- logo -->
+                <div
+                  class="
+                    flex
+                    items-center
+                    justify-center
+                    w-1/3
+                    h-full
+                    sm:w-full
+                    text-white
+                    bg-gray-700
+                  "
+                >
+                  <svg
+                    class="w-6 h-6 lg:hover:animate-pulse fill-current"
+                    ّ
+                    viewBox="0 0 200 200"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_21:10)">
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M100 0C44.75 0 0 44.75 0 100C0 144.25 28.625 181.625 68.375 194.875C73.375 195.75 75.25 192.75 75.25 190.125C75.25 187.75 75.125 179.875 75.125 171.5C50 176.125 43.5 165.375 41.5 159.75C40.375 156.875 35.5 148 31.25 145.625C27.75 143.75 22.75 139.125 31.125 139C39 138.875 44.625 146.25 46.5 149.25C55.5 164.375 69.875 160.125 75.625 157.5C76.5 151 79.125 146.625 82 144.125C59.75 141.625 36.5 133 36.5 94.75C36.5 83.875 40.375 74.875 46.75 67.875C45.75 65.375 42.25 55.125 47.75 41.375C47.75 41.375 56.125 38.75 75.25 51.625C83.25 49.375 91.75 48.25 100.25 48.25C108.75 48.25 117.25 49.375 125.25 51.625C144.375 38.625 152.75 41.375 152.75 41.375C158.25 55.125 154.75 65.375 153.75 67.875C160.125 74.875 164 83.75 164 94.75C164 133.125 140.625 141.625 118.375 144.125C122 147.25 125.125 153.25 125.125 162.625C125.125 176 125 186.75 125 190.125C125 192.75 126.875 195.875 131.875 194.875C151.726 188.173 168.976 175.414 181.197 158.395C193.418 141.375 199.994 120.952 200 100C200 44.75 155.25 0 100 0Z"
+                        fill="current"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_21:10">
+                        <rect width="200" height="200" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+
+                <!-- inputs -->
+                <div
+                  class="
+                    w-2/3
+                    sm:w-full
+                    p-4
+                    bg-white
+                    flex flex-col
+                    gap-4
+                    h-full
+                  "
+                >
+                  <!-- email -->
+                  <div class="flex flex-col gap-2">
+                    <label for="email" class="text-sm font-mono text-gray-700"
+                      >ایمیل</label
+                    >
+                    <div class="relative">
+                      <input
+                        type="email"
+                        class="input"
+                        id="email"
+                        placeholder="example@example.com"
+                      />
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-6 w-6 text-gray-700 absolute top-2 left-3"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <button
+                    type="submit"
+                    class="btn rounded-xl bg-gray-700"
+                    style="margin-top: 0"
+                  >
+                    ورود
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form action="" class="flex flex-col gap-4">
+          <!-- username -->
+          <div class="flex flex-col gap-2">
+            <label for="username" class="text-sm font-mono text-gray-600"
+              >نام کاربری</label
+            >
+            <div class="relative">
+              <input type="text" class="input" id="username" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6 text-gray-600 absolute top-2 left-3"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+            </div>
+          </div>
+          <!-- password -->
+          <div class="flex flex-col gap-2">
+            <label for="password" class="text-sm font-mono text-gray-600"
+              >رمز عبور</label
+            >
+            <div class="relative">
+              <input type="password" class="input" id="password" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6 text-gray-600 absolute top-2 left-3"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <!-- button -->
+          <button type="submit" class="btn rounded-full bg-slate-400 text-black">
+            ورود
+          </button>
+        </form>
+      </div>
+
+      <div x-cloak x-show="openTab === 2">
+        <form class="gap-4 flex flex-col">
+          <div class="flex flex-col gap-2">
+            <label for="username" class="font-mono text-gray-600 text-sm">
+              نام کاربری
+            </label>
+            <div class="relative">
+              <input id="username" class="input" type="text" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="lable text-gray-600"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <label for="email" class="font-mono text-gray-600 text-sm">
+              ایمیل
+            </label>
+            <div class="relative">
+              <input id="email" class="input" type="email" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="lable text-gray-600"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <label for="password" class="font-mono text-gray-600 text-sm">
+              رمز عبور
+            </label>
+            <div class="relative">
+              <input class="input" type="password" id="password" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="lable text-gray-600"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M8 11V7a4 4 0 118 0m-4 8v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2z"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <label
+              for="repeatPassword"
+              class="font-mono text-gray-600 text-sm"
+            >
+              تکرار رمز عبور
+            </label>
+            <div class="relative">
+              <input class="input" id="repeatPassword" type="password" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="lable text-gray-600"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                />
+              </svg>
+            </div>
+          </div>
+          <button class="rounded-full btn bg-slate-400 text-black"> ثبت نام </button>
+        </form>
+      </div>
+    </main>
+    <section class="fixed bottom-0 inset-x-0 w-full h-12 bg-transparent border-t border-slate-600 flex justify-center items-center">
+      <p class="md:text-sm text-[10px] text-slate-800"> کپی رایت 2022 © تمامی حقوق این سایت مطلق به Themmy.info است و کپی برداری و استفاده غیر قانونی از خدمات و ارزش های این سایت غیر قانونی و غیر اخلاقی میباشد </p>
+    </section>
+  </body>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Themmy</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <main>
+      <section
+        class="w-full h-96 flex flex-col gap-3 justify-center items-center p-4 rounded-br-3xl bg-gradient-to-b from-slate-800 to-slate-900 bg-opacity-75"
+      >
+        <h1 class="text-base text-slate-400">قالب ورود کامبو</h1>
+        <h2 class="text-sm text-slate-400">
+          قالب ورود و ثبت نام کامبو با 10 صفحه متفاوت
+        </h2>
+      </section>
+      <section
+        x-data="{pics: true}"
+        class="mt-1 w-full gap-6 h-auto rounded-tr-3xl p-4 bg-gradient-to-b from-slate-800 to-slate-900 bg-opacity-75"
+      >
+        <div class="flex flex-row gap-4 justify-center items-center mb-5">
+          <div
+            x-bind:class="{'border-b-2 border-sky-600' : pics}"
+            x-on:click="pics = true"
+          >
+            <h2 class="text-base cursor-pointer text-slate-400">تصاویر</h2>
+          </div>
+          <div
+            x-bind:class="{'border-b-2 border-sky-600' : !pics}"
+            x-on:click="pics = false"
+          >
+            <h2 class="text-base cursor-pointer text-slate-400">معرفی</h2>
+          </div>
+        </div>
+        <div class="w-full gap-4 md:grid md:grid-cols-3">
+            <div class="flex flex-col-reverse gap-2 justify-start w-auto h-auto mb-5 bg-slate-700 p-2 rounded-xl">
+              <div class="flex flex-row">
+                <a href="./Login-1.html" class="py-2 px-4 w-1/2 rounded-r-lg flex justify-center items-center border-l border-slate-200 text-slate-300 bg-emerald-600" >
+                  <span>
+                    پیش نمایش
+                  </span>
+                </a>
+                <a class="py-2 px-4 w-1/2 rounded-l-lg flex justify-center items-center text-slate-300 bg-sky-600" >
+                  <span>
+                    خرید
+                  </span>
+                </a>
+              </div>
+              <a href="./Login-1.html" class="text-base text-emerald-600 selection:bg-emerald-600 selection:text-white">صفحه یک</a>
+              <a href="./Login-1.html" class="aspect-video rounded-xl overflow-hidden h-full" x-show="pics">
+                <img src="../img/1.png" alt="" class="w-full h-full" />
+              </a>
+              <p class="text-base font-medium text-emerald-700 selection:bg-emerald-600 selection:text-white" x-show="!pics" x-cloak>
+                صفحه اول دارای طراحی پس زمینه گرادنیت با رنگ های آبی و سبز است دارای کارت با طراحی شیشه ای به همراه قسمت انتقال بین صفحات و همچنین دارای دکمه های ورود با سیستم های مختلف مانند فیسبوک و گیت هاب (برنامه نویس باید این دکمه ها را بکارگیرد و این صرفا طرح این دکمه ها هست)
+            </p>
+            </div>
+            <div class="flex flex-col-reverse gap-2 justify-start w-auto h-auto mb-5 bg-slate-700 p-2 rounded-xl">
+              <div class="flex flex-row">
+                <a href="./Login-2.html" class="py-2 px-4 w-1/2 rounded-r-lg flex justify-center items-center border-l border-slate-200 text-slate-300 bg-purple-600" >
+                  <span>
+                    پیش نمایش
+                  </span>
+                </a>
+                <a class="py-2 px-4 w-1/2 rounded-l-lg flex justify-center items-center text-slate-300 bg-amber-600" >
+                  <span>
+                    خرید
+                  </span>
+                </a>
+              </div>
+              <a href="./Login-2.html" class="text-base text-purple-700 selection:bg-purple-600 selection:text-white">صفحه دو</a>
+              <a href="./Login-2.html" class="aspect-video rounded-xl overflow-hidden h-full" x-show="pics">
+                <img src="../img/2.png"" alt="" class="w-full h-full" />
+              </a>
+              <p class="text-base font-medium text-purple-700 selection:bg-purple-600 selection:text-white" x-show="!pics" x-cloak>
+                صفحه دوم دارای طراحی پس زمینه گرادنیت با رنگ های زرد و بنفش است دارای کارت با طراحی شیشه ای به همراه قسمت انتقال بین صفحات و همچنین دارای دکمه های ورود با سیستم های مختلف مانند فیسبوک و گیت هاب (برنامه نویس باید این دکمه ها را بکارگیرد و این صرفا طرح این دکمه ها هست)
+            </p>
+            </div>
+            <div class="flex flex-col-reverse gap-2 justify-start w-auto h-auto mb-5 bg-slate-700 p-2 rounded-xl">
+              <div class="flex flex-row">
+                <a href="./Login-3.html" class="py-2 px-4 w-1/2 rounded-r-lg flex justify-center items-center border-l border-slate-200 text-slate-300 bg-slate-600" >
+                  <span>
+                    پیش نمایش
+                  </span>
+                </a>
+                <a class="py-2 px-4 w-1/2 rounded-l-lg flex justify-center items-center text-slate-300 bg-slate-500" >
+                  <span>
+                    خرید
+                  </span>
+                </a>
+              </div>
+              <a href="./Login-3.html" class="text-base text-slate-700 selection:bg-slate-600 selection:text-white">صفحه سه</a>
+              <a href="./Login-3.html" class="aspect-video rounded-xl overflow-hidden h-full" x-show="pics">
+                <img src="../img/3.png"" alt="" class="w-full h-full" />
+              </a>
+              <p class="text-base font-medium text-slate-700 selection:bg-slate-600 selection:text-white" x-show="!pics" x-cloak>
+                صفحه سوم دارای طراحی پس زمینه گرادنیت با رنگ های طوسی و مشکی است دارای کارت با طراحی شیشه ای به همراه قسمت انتقال بین صفحات و همچنین دارای دکمه های ورود با سیستم های مختلف مانند فیسبوک و گیت هاب (برنامه نویس باید این دکمه ها را بکارگیرد و این صرفا طرح این دکمه ها هست)
+              </p>
+            </div>
+            <div class="flex flex-col-reverse gap-2 justify-start w-auto h-auto mb-5 bg-slate-700 p-2 rounded-xl">
+              <div class="flex flex-row">
+                <a href="./Login-4.html" class="py-2 px-4 w-1/2 rounded-r-lg flex justify-center items-center border-l border-slate-200 text-slate-300 bg-sky-500" >
+                  <span>
+                    پیش نمایش
+                  </span>
+                </a>
+                <a class="py-2 px-4 w-1/2 rounded-l-lg flex justify-center items-center text-slate-300 bg-rose-500" >
+                  <span>
+                    خرید
+                  </span>
+                </a>
+              </div>
+              <a href="./Login-4.html" class="text-base text-sky-700 selection:bg-sky-600 selection:text-white">صفحه چهار</a>
+              <a href="./Login-4.html" class="aspect-video rounded-xl overflow-hidden h-full" x-show="pics">
+                <img src="../img/4.png"" alt="" class="w-full h-full" />
+              </a>
+              <p class="text-base font-medium text-sky-700 selection:bg-sky-600 selection:text-white" x-show="!pics" x-cloak>
+                صفحه چهار دارای طراحی پس زمینه گرادنیت با رنگ های آبی و قرمز است دارای کارت با طراحی شیشه ای به همراه قسمت انتقال بین صفحات و همچنین دارای دکمه های ورود با سیستم های مختلف مانند فیسبوک و گیت هاب (برنامه نویس باید این دکمه ها را بکارگیرد و این صرفا طرح این دکمه ها هست)
+            </p>
+            </div>
+            <div class="flex flex-col-reverse gap-2 justify-start w-auto h-auto mb-5 bg-slate-700 p-2 rounded-xl">
+              <div class="flex flex-row">
+                <a href="./Login-5.html" class="py-2 px-4 w-1/2 rounded-r-lg flex justify-center items-center border-l border-slate-200 text-slate-300 bg-amber-700" >
+                  <span>
+                    پیش نمایش
+                  </span>
+                </a>
+                <a class="py-2 px-4 w-1/2 rounded-l-lg flex justify-center items-center text-slate-300 bg-emerald-600" >
+                  <span>
+                    خرید
+                  </span>
+                </a>
+              </div>
+              <a href="./Login-5.html" class="text-base text-amber-600 selection:bg-amber-700 selection:text-white">صفحه پنج</a>
+              <a href="./Login-5.html" class="aspect-video rounded-xl overflow-hidden h-full" x-show="pics">
+                <img src="../img/5.png"" alt="" class="w-full h-full" />
+              </a>
+              <p class="text-base font-medium text-amber-600 selection:bg-amber-700 selection:text-white" x-show="!pics" x-cloak>
+                صفحه پنجم دارای طراحی دارک است، دارای کارت با طراحی شیشه ای به همراه قسمت انتقال بین صفحات و همچنین دارای دکمه های ورود با سیستم های مختلف مانند فیسبوک و گیت هاب (برنامه نویس باید این دکمه ها را بکارگیرد و این صرفا طرح این دکمه ها هست)
+            </p>
+            </div>
+            <div class="flex flex-col-reverse gap-2 justify-start w-auto h-auto mb-5 bg-slate-700 p-2 rounded-xl">
+              <div class="flex flex-row">
+                <a href="./Login-6.html" class="py-2 px-4 w-1/2 rounded-r-lg flex justify-center items-center border-l border-slate-200 text-slate-300 bg-slate-500" >
+                  <span>
+                    پیش نمایش
+                  </span>
+                </a>
+                <a class="py-2 px-4 w-1/2 rounded-l-lg flex justify-center items-center text-slate-300 bg-slate-600" >
+                  <span>
+                    خرید
+                  </span>
+                </a>
+              </div>
+              <a href="./Login-6.html" class="text-base text-slate-500 selection:bg-slate-600 selection:text-white">صفحه شش</a>
+              <a href="./Login-6.html" class="aspect-video rounded-xl overflow-hidden h-full" x-show="pics">
+                <img src="../img/6.png"" alt="" class="w-full h-full" />
+              </a>
+              <p class="text-base font-medium text-slate-600 selection:bg-slate-600 selection:text-white" x-show="!pics" x-cloak>
+                صفحه ششم دارای طراحی گرادینت سفید و سیاه است دارای کارت با طراحی شیشه ای به همراه قسمت انتقال بین صفحات و همچنین دارای دکمه های ورود با سیستم های مختلف مانند فیسبوک و گیت هاب (برنامه نویس باید این دکمه ها را بکارگیرد و این صرفا طرح این دکمه ها هست)
+            </p>
+            </div>
+            <div class="flex flex-col-reverse gap-2 justify-start w-auto h-auto mb-5 bg-slate-700 p-2 rounded-xl">
+              <div class="flex flex-row">
+                <a href="./Login-7.html" class="py-2 px-4 w-1/2 rounded-r-lg flex justify-center items-center border-l border-slate-200 text-slate-300 bg-slate-600" >
+                  <span>
+                    پیش نمایش
+                  </span>
+                </a>
+                <a class="py-2 px-4 w-1/2 rounded-l-lg flex justify-center items-center text-slate-300 bg-slate-600" >
+                  <span>
+                    خرید
+                  </span>
+                </a>
+              </div>
+              <a href="./Login-7.html" class="text-base text-slate-800 selection:bg-slate-800 selection:text-white">صفحه هفت</a>
+              <a href="./Login-7.html" class="aspect-video rounded-xl overflow-hidden h-full" x-show="pics">
+                <img src="../img/7.png"" alt="" class="w-full h-full" />
+              </a>
+              <p class="text-base font-medium text-slate-800 selection:bg-slate-800 selection:text-white" x-show="!pics" x-cloak>
+                صفحه هفتم دارای طراحی دارک مود است دارای کارت با طراحی شیشه ای به همراه قسمت انتقال بین صفحات و همچنین دارای دکمه های ورود با سیستم های مختلف مانند فیسبوک و گیت هاب (برنامه نویس باید این دکمه ها را بکارگیرد و این صرفا طرح این دکمه ها هست)
+            </p>
+            </div>
+            <div class="flex flex-col-reverse gap-2 justify-start w-auto h-auto mb-5 bg-slate-700 p-2 rounded-xl">
+              <div class="flex flex-row">
+                <a href="./Login-8.html" class="py-2 px-4 w-1/2 rounded-r-lg flex justify-center items-center border-l border-slate-200 text-slate-300 bg-slate-500" >
+                  <span>
+                    پیش نمایش
+                  </span>
+                </a>
+                <a class="py-2 px-4 w-1/2 rounded-l-lg flex justify-center items-center text-slate-300 bg-slate-500" >
+                  <span>
+                    خرید
+                  </span>
+                </a>
+              </div>
+              <a href="./Login-8.html" class="text-base text-slate-100 selection:bg-slate-100 selection:text-black">صفحه هشت</a>
+              <a href="./Login-8.html" class="aspect-video rounded-xl overflow-hidden h-full" x-show="pics">
+                <img src="../img/8.png"" alt="" class="w-full h-full" />
+              </a>
+              <p class="text-base font-medium text-slate-100 selection:bg-slate-100 selection:text-black" x-show="!pics" x-cloak>
+                صفحه هشتم دارای طراحی لایت مود است دارای کارت با طراحی شیشه ای به همراه قسمت انتقال بین صفحات و همچنین دارای دکمه های ورود با سیستم های مختلف مانند فیسبوک و گیت هاب (برنامه نویس باید این دکمه ها را بکارگیرد و این صرفا طرح این دکمه ها هست)
+            </p>
+            </div>
+            <div class="flex flex-col-reverse gap-2 justify-start w-auto h-auto mb-5 bg-slate-700 p-2 rounded-xl">
+              <div class="flex flex-row">
+                <a href="./Login-9.html" class="py-2 px-4 w-1/2 rounded-r-lg flex justify-center items-center border-l border-slate-200 text-slate-300 bg-slate-800" >
+                  <span>
+                    پیش نمایش
+                  </span>
+                </a>
+                <a class="py-2 px-4 w-1/2 rounded-l-lg flex justify-center items-center text-slate-300 bg-slate-800" >
+                  <span>
+                    خرید
+                  </span>
+                </a>
+              </div>
+              <a href="./Login-9.html" class="text-base text-slate-800 selection:bg-slate-800 selection:text-white">صفحه نه</a>
+              <a href="./Login-9.html" class="aspect-video rounded-xl overflow-hidden h-full" x-show="pics">
+                <img src="../img/9.png"" alt="" class="w-full h-full" />
+              </a>
+              <p class="text-base font-medium text-slate-800 selection:bg-slate-800 selection:text-white" x-show="!pics" x-cloak>
+                صفحه نهم دارای طراحی دارک مود و لایت مود اس که به صورت خودکار بسته به تم سیستم عامل کاربر تغییر میکند و دارای کارت با طراحی شیشه ای به همراه قسمت انتقال بین صفحات و همچنین دارای دکمه های ورود با سیستم های مختلف مانند فیسبوک و گیت هاب (برنامه نویس باید این دکمه ها را بکارگیرد و این صرفا طرح این دکمه ها هست)
+              </p>
+            </div>
+            <div class="flex flex-col-reverse gap-2 justify-start w-auto h-auto mb-5 bg-slate-700 p-2 rounded-xl">
+              <div class="flex flex-row">
+                <a href="./Login-10.html" class="py-2 px-4 w-1/2 rounded-r-lg flex justify-center items-center border-l border-slate-200 text-slate-300 bg-slate-800" >
+                  <span>
+                    پیش نمایش
+                  </span>
+                </a>
+                <a class="py-2 px-4 w-1/2 rounded-l-lg flex justify-center items-center text-slate-300 bg-slate-800" >
+                  <span>
+                    خرید
+                  </span>
+                </a>
+              </div>
+              <a href="./Login-10.html" class="text-base text-slate-800 selection:bg-slate-800 selection:text-white">صفحه ده</a>
+              <a href="./Login-10.html" class="aspect-video rounded-xl overflow-hidden h-full" x-show="pics">
+                <img src="../img/10.png" alt="" class="w-full h-full" />
+              </a>
+              <p class="text-base font-medium text-slate-800 selection:bg-slate-800 selection:text-white" x-show="!pics" x-cloak>
+                صفحه دهم دارای طراحی دارک مود و لایت مود اس که به صورت خودکار بسته به تم سیستم عامل کاربر تغییر میکند و دارای کارت با طراحی گرادنیت سیاه و سفید به همراه قسمت انتقال بین صفحات و همچنین دارای دکمه های ورود با سیستم های مختلف مانند فیسبوک و گیت هاب (برنامه نویس باید این دکمه ها را بکارگیرد و این صرفا طرح این دکمه ها هست)
+            </p>
+            </div>
+        </div>
+      </section>
+      <section class="w-full h-12 bg-slate-900 border-t border-slate-600 flex justify-center items-center">
+        <p class="md:text-sm text-[10px] text-slate-400"> کپی رایت 2022 © تمامی حقوق این سایت مطلق به Themmy.info است و کپی برداری و استفاده غیر قانونی از خدمات و ارزش های این سایت غیر قانونی و غیر اخلاقی میباشد </p>
+      </section>
+    </main>
+  </body>
+  <script>
+    var swiper = new Swiper(".Swiper", {
+      effect: "cards",
+      grabCursor: true,
+    });
+  </script>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</html>

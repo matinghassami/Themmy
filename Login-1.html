@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ورود</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300&display=swap" rel="stylesheet"> 
+  </head>
+  <body class="h-[45rem] overflow-hidden">
+    <main class="grid-cols-12 grid justify-center items-center">
+      <!-- Side bar section -->
+      <div class="col-span-5 w-full h-[45rem] hidden md:block">
+        <div
+          class="bg-[#27AE60] w-full h-[45rem] flex flex-col gap-6 justify-center items-center"
+        >
+          <h2 class="text-xl text-emerald-800">سلام، به مونو این خوش آمدید</h2>
+          <h4 class="text-sm text-emerald-800">
+            مونو این قالب ورود و ثبت نام با بیش از 5 صفحه متفاوت
+          </h4>
+          <a
+            class="py-3 px-20 rounded-lg bg-[#56cbf2] shadow-md shadow-[#2a854f] text-white"
+            href="./register-1.html"
+          >
+            ثبت نام کن
+          </a>
+        </div>
+      </div>
+      <!-- form section -->
+      <div
+        class="md:col-span-7 col-span-12 w-full h-[45rem] bg-emerald-200  flex justify-center items-start md:items-center md:pt-0 pt-10"
+      >
+      <!-- form -->
+        <form class="bg-[#27AE60] md:w-2/3 md:h-2/3 w-5/6 h-4/6 rounded-lg p-4 shadow-xl shadow-emerald-800">
+          <!-- email input -->
+          <div class="flex flex-col gap-4">
+            <label for="email" class="text-black text-sm">
+              ایمیلت رو وارد کن :)
+            </label>
+            <div class="relative">
+              <input id="email" class="input" type="email" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="lable text-black"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
+              </svg>
+            </div>
+          </div>
+          <!-- password input -->
+          <div class="flex flex-col gap-4 mt-10">
+            <label for="email" class="text-black text-sm">
+              رمز عبورتو بده ;)
+            </label>
+            <div class="relative">
+              <input id="email" class="input" type="email" />
+              <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="lable text-black"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+              />
+            </svg>
+            </div>
+          </div>
+          <!-- help links -->
+          <div class="mt-10 flex flex-col gap-4 mb-10">
+            <a href="./register-1.html" class="text-black">حساب کاربری نداری ؟!</a>
+            <a href="" class="text-black">رمز عبورت رو یادت نیست ؟:(</a>
+          </div>
+          <!-- button -->
+          <button type="submit" class="py-4 w-full text-sm shadow-md shadow-[#0d607c] text-black rounded-xl bg-[#56cbf2]">  وارد شو ;)</button>
+        </form>
+      </div>
+    </main>
+  </body>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</html>

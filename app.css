@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[x-cloak] { display: none !important; }
+
+@layer components {
+    .input {
+      @apply shadow-glass
+        focus:outline-none
+        bg-transparent
+        pl-10
+        w-full
+        rounded-full
+        border border-gray-300
+        h-10
+        pr-3;
+    }
+    
+    .lable {
+        @apply h-6 w-6 absolute top-2 left-2;
+    }
+    
+    .btn {
+        @apply py-2 w-full text-base font-mono text-white mt-5 hover:shadow-lg transition-all ease-in duration-300 items-center justify-center;
+    }
+}
+
+body {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+}
